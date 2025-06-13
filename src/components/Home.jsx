@@ -103,10 +103,10 @@ function Home() {
           <div
             className="absolute top-0 right-0 block pointer-events-auto animate-bounce-slow"
             style={{
-              width: "90px",
-              height: "90px",
-              marginTop: "10px",
-              marginRight: "8px",
+              width: "150px",
+              height: "150px",  
+              marginRight: "0px",
+              marginTop: "-70px",
             }}
           >
             <Spline
@@ -124,7 +124,7 @@ function Home() {
                 .absolute.top-0.right-0.pointer-events-auto.animate-bounce-slow {
                   width: 120px !important;
                   height: 120px !important;
-                  margin-top: 30px !important;
+                  margin-top: 100px !important;
                   margin-right: 20px !important;
                 }
               }
@@ -132,7 +132,7 @@ function Home() {
                 .absolute.top-0.right-0.pointer-events-auto.animate-bounce-slow {
                   width: 180px !important;
                   height: 180px !important;
-                  margin-top: 100px !important;
+                  margin-top: 10px !important;
                   margin-right: 40px !important;
                 }
               }
