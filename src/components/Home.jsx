@@ -101,15 +101,13 @@ function Home() {
         >
           {/* Spline 3D at the top right of the black bg main content */}
           <div
-            className="absolute top-0  right-0 block pointer-events-auto animate-bounce-slow"
+            className="absolute top-0 right-0 block pointer-events-auto animate-bounce-slow"
             style={{
-              width: "100px",
-              height: "100px",
-              marginTop: "1px",
-              marginRight: "10px",
+              width: "90px",
+              height: "90px",
+              marginTop: "10px",
+              marginRight: "8px",
             }}
-            // Large screens
-            // Tailwind doesn't support responsive inline styles, so use a media query below
           >
             <Spline
               scene="https://prod.spline.design/ZwnMownJAdYIWNRf/scene.splinecode"
@@ -122,6 +120,14 @@ function Home() {
           </div>
           <style>
             {`
+              @media (min-width: 640px) {
+                .absolute.top-0.right-0.pointer-events-auto.animate-bounce-slow {
+                  width: 120px !important;
+                  height: 120px !important;
+                  margin-top: 30px !important;
+                  margin-right: 20px !important;
+                }
+              }
               @media (min-width: 1024px) {
                 .absolute.top-0.right-0.pointer-events-auto.animate-bounce-slow {
                   width: 180px !important;
@@ -148,11 +154,11 @@ function Home() {
             providing businesses with strategic, actionable problem-solving
             tools.
           </p>
-          <div className="flex flex-col sm:flex-row rounded-lg w-full sm:w-40 bg-[#575656]">
-            <button className="px-2 py-2 text-sm text-start text-nowrap text-white rounded-xl hover:bg-orange-600 transition duration-300 w-full sm:w-auto">
+          <div className="flex sm:flex-row rounded-lg w-fit bg-[#575656]">
+            <button className="px-2 py-2 text-sm text-start text-nowrap text-white rounded-xl hover:bg-orange-600 transition duration-300">
               Schedule a call
             </button>
-            <div className="h-8 bg-orange-600 flex w-10 m-1 ml-0 sm:ml-3 items-center justify-center rounded-xl">
+            <div className="h-8 bg-orange-600 flex w-10 m-1 ml-0 items-center justify-center rounded-xl">
               <ArrowRight className="text-white" />
             </div>
           </div>
