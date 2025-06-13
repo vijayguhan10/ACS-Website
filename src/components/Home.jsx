@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
+import Spline from "@splinetool/react-spline";
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -94,10 +95,50 @@ function Home() {
         className={`flex items-center justify-center mt-8 min-h-[60vh] px-2 transition-all duration-300 pt-20`}
       >
         <section
-          className={`flex rounded-3xl bg-[#000000f1] w-full max-w-4xl gap-6 flex-col items-start justify-start text-center px-4 sm:px-6 py-8 sm:py-12 ${
+          className={`relative flex rounded-3xl bg-[#000000f1] w-full max-w-4xl gap-6 flex-col items-start justify-start text-center px-4 sm:px-6 py-8 sm:py-12 ${
             menuOpen ? "mt-10" : ""
           }`}
         >
+          {/* Spline 3D at the top right of the black bg main content */}
+          <div
+            className="absolute top-0  right-0 block pointer-events-auto animate-bounce-slow"
+            style={{
+              width: "100px",
+              height: "100px",
+              marginTop: "1px",
+              marginRight: "10px",
+            }}
+            // Large screens
+            // Tailwind doesn't support responsive inline styles, so use a media query below
+          >
+            <Spline
+              scene="https://prod.spline.design/ZwnMownJAdYIWNRf/scene.splinecode"
+              style={{
+                background: "transparent",
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </div>
+          <style>
+            {`
+              @media (min-width: 1024px) {
+                .absolute.top-0.right-0.pointer-events-auto.animate-bounce-slow {
+                  width: 180px !important;
+                  height: 180px !important;
+                  margin-top: 100px !important;
+                  margin-right: 40px !important;
+                }
+              }
+              @keyframes bounce-slow {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-30px); }
+              }
+              .animate-bounce-slow {
+                animation: bounce-slow 2.5s infinite;
+              }
+            `}
+          </style>
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl mt-8 sm:mt-28 font-bold leading-tight text-left sm:text-center">
             Innovate, Automate, <br className="hidden sm:block" /> and Succeed
             with AI

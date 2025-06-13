@@ -7,6 +7,7 @@ import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
 import Footer from "./components/Footer";
 import FAQs from "./components/Faq";
+import Spline from "@splinetool/react-spline";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -20,6 +21,8 @@ const sectionVariants = {
 const App = () => {
   return (
     <div className="font-primary">
+      {/* Spline 3D on the right side, visible on all pages */}
+      
       <div className="bg-gray-100">
         <motion.div
           variants={sectionVariants}
@@ -29,7 +32,8 @@ const App = () => {
         >
           <Home />
         </motion.div>
-        {/* Section2 animates immediately */}
+
+        {/* Section 2, animate immediately */}
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -37,6 +41,7 @@ const App = () => {
         >
           <Section2 />
         </motion.div>
+
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -45,6 +50,7 @@ const App = () => {
         >
           <Section3 />
         </motion.div>
+
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -54,6 +60,7 @@ const App = () => {
           <Section4 />
         </motion.div>
       </div>
+
       <motion.div
         variants={sectionVariants}
         initial="hidden"
@@ -62,6 +69,7 @@ const App = () => {
       >
         <Section5 />
       </motion.div>
+
       <div className="bg-gray-100">
         <motion.div
           variants={sectionVariants}
@@ -72,6 +80,7 @@ const App = () => {
           <FAQs />
         </motion.div>
       </div>
+
       <Footer />
     </div>
   );
