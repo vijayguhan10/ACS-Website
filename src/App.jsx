@@ -21,9 +21,9 @@ const sectionVariants = {
 
 const App = () => {
   return (
-    <div className="font-primary">
+    <div className="font-primary bg-gray-100">
       <Nav />
-      <div className="bg-gray-100">
+      <div className="">
         <motion.div
           variants={sectionVariants}
           initial="hidden"

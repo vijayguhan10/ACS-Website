@@ -5,7 +5,7 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 flex justify-between items-center">
+    <nav className="sticky top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 flex justify-between items-center b backdrop-blur-xl  ">
       {/* Logo */}
       <div className="text-2xl sm:text-3xl font-bold text-gradient">
         Autom Consultancy <span className="text-purple-600">ACS</span>
