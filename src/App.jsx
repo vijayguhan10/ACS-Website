@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Section2 from "./components/Section-2";
 import Section3 from "./components/Section3";
@@ -21,8 +22,7 @@ const sectionVariants = {
 const App = () => {
   return (
     <div className="font-primary">
-      {/* Spline 3D on the right side, visible on all pages */}
-      
+      <Nav />
       <div className="bg-gray-100">
         <motion.div
           variants={sectionVariants}
@@ -32,8 +32,6 @@ const App = () => {
         >
           <Home />
         </motion.div>
-
-        {/* Section 2, animate immediately */}
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -41,7 +39,6 @@ const App = () => {
         >
           <Section2 />
         </motion.div>
-
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -50,7 +47,6 @@ const App = () => {
         >
           <Section3 />
         </motion.div>
-
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -60,7 +56,6 @@ const App = () => {
           <Section4 />
         </motion.div>
       </div>
-
       <motion.div
         variants={sectionVariants}
         initial="hidden"
@@ -69,7 +64,6 @@ const App = () => {
       >
         <Section5 />
       </motion.div>
-
       <div className="bg-gray-100">
         <motion.div
           variants={sectionVariants}
@@ -80,7 +74,6 @@ const App = () => {
           <FAQs />
         </motion.div>
       </div>
-
       <Footer />
     </div>
   );
