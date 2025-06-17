@@ -29,7 +29,7 @@ const Nav = () => {
 
       {/* Mobile Menu Button */}
       <button
-        className="sm:hidden p-2 rounded-md hover:bg-gray-200/20 transition"
+        className="backdrop-blur-xl sm:hidden p-2 rounded-md hover:bg-gray-200/20 transition"
         onClick={() => setMenuOpen(true)}
         aria-label="Open menu"
       >

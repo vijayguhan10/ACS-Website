@@ -7,7 +7,7 @@ function Home() {
     <div className="text-white">
       {/* Main Content */}
       <div
-        className={`flex items-center justify-center mt-8 min-h-[60vh] px-2 transition-all duration-300 pt-20`}
+        className={`flex items-center justify-center  min-h-[60vh] px-2 transition-all duration-300 xl:mt-32`}
       >
         <section
           className={`relative flex rounded-3xl bg-[#000000f1] w-full max-w-4xl gap-6 flex-col items-start justify-start text-center px-4 sm:px-6 py-8 sm:py-12`}
