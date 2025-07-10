@@ -48,7 +48,7 @@ function Section5() {
         driving success in the digital landscape.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full sm:w-[90%] md:w-[80%] lg:w-[70%] gap-6 sm:gap-8 mt-8 sm:mt-12 mx-auto">
+      <div className=" mb-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full sm:w-[90%] md:w-[80%] lg:w-[70%] gap-6 sm:gap-8 mt-8 sm:mt-12 mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
