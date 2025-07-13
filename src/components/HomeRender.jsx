@@ -16,7 +16,7 @@ const sectionVariants = {
 
 const HomeRender = () => {
   return (
-    <div className="font-primary bg-gray-100">
+    <div className="font-primary bg-white">
       <div className="">
         <motion.div
           variants={sectionVariants}

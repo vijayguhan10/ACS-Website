@@ -1,6 +1,8 @@
 import React from "react";
 import erpimage from "./../assets/image.png";
 import Acs from "./../assets/ACS.jpg";
+import { FaBrain, FaUsers, FaLock, FaBolt } from "react-icons/fa";
+
 const stats = [
   { value: "30", label: "Our Experience" },
   { value: "2m", label: "Scans per day" },
@@ -9,10 +11,10 @@ const stats = [
 ];
 
 const features = [
-  { label: "Expert Problem Solve", icon: "🧠" },
-  { label: "Expert Team Members", icon: "👥" },
-  { label: "Security Management", icon: "🔒" },
-  { label: "Identifying Threats Quick", icon: "⚡" },
+  { label: "Expert Problem Solve", icon: <FaBrain /> },
+  { label: "Expert Team Members", icon: <FaUsers /> },
+  { label: "Security Management", icon: <FaLock /> },
+  { label: "Identifying Threats Quick", icon: <FaBolt /> },
 ];
 
 const HomePage = () => (
@@ -45,7 +47,6 @@ const HomePage = () => (
               src={erpimage}
               alt="Cyber Security Illustration"
               className="w-96 h-96 sm:w-80 sm:h-80 object-contain"
-             
             />
           </div>
         </div>
@@ -97,7 +98,7 @@ const HomePage = () => (
           <div className="grid grid-cols-2 gap-4 mb-6">
             {features.map((feature) => (
               <div key={feature.label} className="flex items-center gap-2">
-                <span className="text-xl">{feature.icon}</span>
+                {feature.icon}
                 <span className="text-sm text-gray-800">{feature.label}</span>
               </div>
             ))}
