@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100); // 3 feet ≈ 900px
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 flex justify-between items-center b backdrop-blur-xl  ">
+    <nav
+      className={`sticky top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 flex justify-between items-center backdrop-blur-xl transition-colors duration-300 ${
+        scrolled
+          ? "bg-white"
+          : "bg-gradient-to-t from-[#f3e8ff] via-[#fff3ff] to-white"
+      }`}
+    >
       {/* Logo */}
       <div className="text-2xl sm:text-3xl font-bold text-gradient">
         Autom Consultancy <span className="text-purple-600">ACS</span>

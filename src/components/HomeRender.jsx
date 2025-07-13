@@ -51,15 +51,15 @@ const HomeRender = () => {
         </motion.div>
       </div>
 
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-            <Section5 />
-        </motion.div>
-      </div>
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Section5 />
+      </motion.div>
+    </div>
   );
 };
 

@@ -1,9 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import HomeRender from "../components/HomeRender";
-import Contact from "../components/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import HomeRender from "../components/HomeRender";
+import Contact from "../components/Contact";
+
 const InitialRouter = () => (
   <Router>
     <Nav />
