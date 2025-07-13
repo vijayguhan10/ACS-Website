@@ -157,9 +157,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full py-2 rounded-xl bg-gradient-to-r from-purple-500 via-blue-400 to-purple-600 text-white font-semibold flex items-center justify-center gap-2 shadow-2xl hover:scale-105 transition
-    border-b-4 border-purple-800 active:translate-y-1 active:shadow-lg
-    relative overflow-hidden"
+              className="w-full sm:w-auto py-2 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-blue-400 text-white font-semibold flex items-center justify-center gap-2 shadow-2xl hover:scale-105 transition border-b-4 border-purple-800 active:translate-y-1 active:shadow-lg relative overflow-hidden mt-2"
               style={{
                 boxShadow:
                   "0 8px 24px 0 rgba(80, 0, 120, 0.18), 0 1.5px 0 0 #6d28d9",
@@ -265,7 +263,7 @@ const Contact = () => {
                 If there are questions you want to ask, we will answer all your
                 questions.
               </p>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <input
                   type="text"
                   placeholder="Enter your question"
@@ -274,9 +272,15 @@ const Contact = () => {
                 />
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-purple-500 to-blue-400 text-white font-semibold flex items-center gap-1 shadow hover:scale-105 transition"
+                  className="w-full sm:w-auto py-2 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-blue-400 text-white font-semibold flex items-center justify-center gap-2 shadow-2xl hover:scale-105 transition border-b-4 border-purple-800 active:translate-y-1 active:shadow-lg relative overflow-hidden"
+                  style={{
+                    boxShadow:
+                      "0 8px 24px 0 rgba(80, 0, 120, 0.18), 0 1.5px 0 0 #6d28d9",
+                  }}
                 >
-                  <Send className="w-4 h-4" /> Submit
+                  <span className="drop-shadow-[0_2px_2px_rgba(80,0,120,0.15)] flex items-center gap-2">
+                    <Send className="w-4 h-4" /> Submit
+                  </span>
                 </button>
               </div>
             </form>
