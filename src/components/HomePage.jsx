@@ -39,21 +39,19 @@ const HomePage = () => (
           </button>
         </div>
         {/* Illustration */}
-        <div className="flex-1 flex justify-center items-center">
-          <div className="p-4">
+        <div className=" justify-center items-center">
+          <div className="">
             <img
               src={erpimage}
               alt="Cyber Security Illustration"
               className="w-96 h-96 sm:w-80 sm:h-80 object-contain"
-              style={{
-                filter: "drop-shadow(0 8px 32px rgba(115,103,240,0.25))",
-              }}
+             
             />
           </div>
         </div>
       </div>
       {/* Stats */}
-      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8 px-4">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 xl:mt-8 px-4">
         {stats.map((stat) => (
           <div
             key={stat.label}
@@ -71,14 +69,14 @@ const HomePage = () => (
     </section>
 
     {/* About Section */}
-    <section className="mt-16 py-12 px-4">
-      <div className="max-w-5xl mx-auto rounded-3xl shadow-xl bg-white p-8 flex flex-col md:flex-row items-center gap-8">
+    <section className=" py-4 px-4">
+      <div className="max-w-5xl mx-auto rounded-3xl shadow-xl bg-white p-4 flex flex-col md:flex-row items-center gap-8">
         {/* Illustration */}
-        <div className="flex-1 flex justify-center items-center">
+        <div className="flex-1 flex justify-center items-center md:mb-0">
           <img
             src={Acs}
             alt="Company Illustration"
-            className="w-64 h-64 object-contain"
+            className="w-40 h-40 sm:w-64 sm:h-64 object-contain"
           />
         </div>
         {/* Content */}
