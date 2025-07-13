@@ -54,23 +54,32 @@ const Nav = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <>
-          {/* Background overlay with blur effect */}
+          {/* Prevent background scroll when menu is open */}
+          <style>{`
+            body { overflow: hidden !important; }
+          `}</style>
+
+          {/* Background overlay with enhanced glass effect */}
           <div
-            className="fixed inset-0 z-40 bg-black/30 backdrop-blur-3xl"
+            className="fixed inset-0 z-40 bg-gradient-to-br from-white/30 via-purple-200/30 to-blue-200/30 backdrop-blur-[10px] border border-white/30 shadow-2xl transition-opacity duration-300"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu overlay"
+            style={{ willChange: "opacity" }}
           ></div>
 
-          {/* Menu Container with glass effect */}
-          <div className="fixed top-0 left-0 w-full min-h-screen z-50 animate-slide-down">
+          {/* Menu Container with stronger glass effect and smooth animation */}
+          <div
+            className="fixed top-0 left-0 w-full min-h-screen z-50 animate-slide-down"
+            style={{ willChange: "transform" }}
+          >
             {/* Header with frosted glass effect */}
-            <div className="bg-white/20 backdrop-blur-3xl border-b border-white/30 shadow-lg p-4">
+            <div className="bg-white/30 backdrop-blur-3xl border-b border-white/40 shadow-lg p-4">
               <div className="flex justify-between items-center">
                 <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent drop-shadow-sm">
                   ACS
                 </span>
                 <button
-                  className="p-2 rounded-md hover:bg-white/20 transition backdrop-blur-sm"
+                  className="p-2 rounded-md hover:bg-white/30 transition backdrop-blur-sm"
                   onClick={() => setMenuOpen(false)}
                   aria-label="Close menu"
                 >
@@ -79,8 +88,8 @@ const Nav = () => {
               </div>
             </div>
 
-            {/* Menu Links with solid background */}
-            <div className="bg-white/95 backdrop-blur-sm">
+            {/* Menu Links with glass effect */}
+            <div className="bg-white/100 backdrop-blur-2xl border-x border-white/30 shadow-2xl">
               <nav className="flex flex-col gap-6 text-lg p-4 pt-8">
                 <a
                   href="/"
