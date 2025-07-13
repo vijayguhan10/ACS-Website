@@ -58,12 +58,14 @@ const Contact = () => {
             </div>
             <div className="flex items-center gap-3 text-gray-800 text-lg">
               <Phone className="w-5 h-5 text-purple-500" />
-              <span>+1 321-221-2321</span>
+              <span>+91 82205 63218</span>
             </div>
             <div className="flex items-center gap-3 text-gray-800 text-lg">
               <MapPin className="w-5 h-5 text-purple-500" />
               <span>
-                123 Tech Boulevard, Suite 456, San Francisco, CA 12345
+                Kondampatti (Post), Vadasithur (Via), Kinathukadavu,
+                <br />
+                Coimbatore - 641 202, Tamil Nadu, India
               </span>
             </div>
           </div>
@@ -186,12 +188,13 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200 bg-white/70 backdrop-blur-xl">
           <iframe
-            title="ACS Location"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4194%2C37.7749%2C-122.4194%2C37.7749&amp;layer=mapnik"
+            title="Sri Eshwar College of Engineering Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.042307948403!2d77.0579419!3d10.827908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba84ee37569ae7f%3A0x3c5b1824b6e79192!2sSri%20Eshwar%20College%20of%20Engineering%2C%20Coimbatore!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
             className="w-full h-64 md:h-80"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
         <div>
@@ -206,18 +209,16 @@ const Contact = () => {
             <div>
               <div className="font-semibold">Headquarters</div>
               <div className="text-gray-700">
-                ACS Inc.
+                Sri Eshwar College of Engineering
                 <br />
-                123 Tech Boulevard, Suite 456
+                Kondampatti (Post), Vadasithur (Via), Kinathukadavu,
                 <br />
-                San Francisco, CA 12345
-                <br />
-                United States
+                Coimbatore - 641 202, Tamil Nadu, India
               </div>
             </div>
           </div>
           <a
-            href="https://maps.google.com/?q=123+Tech+Boulevard,+San+Francisco,+CA"
+            href="https://www.google.com/maps/place/Sri+Eshwar+College+of+Engineering,+Coimbatore/@10.827908,77.0579419,814m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3ba84ee37569ae7f:0x3c5b1824b6e79192!8m2!3d10.827908!4d77.0605168!16s%2Fg%2F1tdyp6pq?entry=ttu"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-400 text-white font-semibold shadow hover:scale-105 transition"
