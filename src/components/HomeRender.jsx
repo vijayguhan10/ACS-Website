@@ -15,6 +15,7 @@ const sectionVariants = {
 };
 
 const HomeRender = () => {
+  console.log("HomeRender component rendered");
   return (
     <div className="font-primary bg-white">
       <div className="">
