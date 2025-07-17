@@ -101,7 +101,7 @@ const Contact = () => {
         </div>
         {/* Contact Form */}
         <div className="relative flex justify-center items-center">
-          <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/30 via-white/40 to-blue-300/30 rounded-3xl blur-2xl opacity-80 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-white via-white/40 to-blue-300/30 rounded-3xl blur-2xl opacity-80 pointer-events-none" />
           <form
             className="relative z-10 w-full max-w-md bg-white/60 backdrop-blur-2xl rounded-3xl shadow-2xl p-10 border border-white/40 ring-1 ring-purple-100"
             onSubmit={(e) => e.preventDefault()}
@@ -156,16 +156,10 @@ const Contact = () => {
               />
             </div>
             <button
+              className="w-full bg-white text-gray-900 font-semibold py-2 px-4 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
               type="submit"
-              className="w-full sm:w-auto py-2 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-blue-400 text-white font-semibold flex items-center justify-center gap-2 shadow-2xl hover:scale-105 transition border-b-4 border-purple-800 active:translate-y-1 active:shadow-lg relative overflow-hidden mt-2"
-              style={{
-                boxShadow:
-                  "0 8px 24px 0 rgba(80, 0, 120, 0.18), 0 1.5px 0 0 #6d28d9",
-              }}
             >
-              <span className="drop-shadow-[0_2px_2px_rgba(80,0,120,0.15)] flex items-center gap-2">
-                <Send className="w-5 h-5" /> Submit
-              </span>
+              Send Message
             </button>
             <p className="text-xs text-gray-500 mt-3 text-center">
               By submitting, you agree to our{" "}
@@ -219,9 +213,15 @@ const Contact = () => {
             href="https://www.google.com/maps/place/Sri+Eshwar+College+of+Engineering,+Coimbatore/@10.827908,77.0579419,814m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3ba84ee37569ae7f:0x3c5b1824b6e79192!8m2!3d10.827908!4d77.0605168!16s%2Fg%2F1tdyp6pq?entry=ttu"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-400 text-white font-semibold shadow hover:scale-105 transition"
           >
-            Open in Google Maps
+            <button
+              type="submit"
+              className="w-full sm:w-auto py-2 px-4 rounded-xl bg-white text-gray-900 font-semibold flex items-center justify-center gap-2 shadow-lg border border-gray-200 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
+            >
+              <span className="flex items-center gap-2">
+                <Send className="w-4 h-4" /> Open in Google Maps
+              </span>
+            </button>
           </a>
         </div>
       </div>
@@ -272,13 +272,9 @@ const Contact = () => {
                 />
                 <button
                   type="submit"
-                  className="w-full sm:w-auto py-2 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-blue-400 text-white font-semibold flex items-center justify-center gap-2 shadow-2xl hover:scale-105 transition border-b-4 border-purple-800 active:translate-y-1 active:shadow-lg relative overflow-hidden"
-                  style={{
-                    boxShadow:
-                      "0 8px 24px 0 rgba(80, 0, 120, 0.18), 0 1.5px 0 0 #6d28d9",
-                  }}
+                  className="w-full sm:w-auto py-2 px-4 rounded-xl bg-white text-gray-900 font-semibold flex items-center justify-center gap-2 shadow-lg border border-gray-200 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
                 >
-                  <span className="drop-shadow-[0_2px_2px_rgba(80,0,120,0.15)] flex items-center gap-2">
+                  <span className="flex items-center gap-2">
                     <Send className="w-4 h-4" /> Submit
                   </span>
                 </button>

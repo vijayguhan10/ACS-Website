@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom"; // Add this import
 import { Menu, X } from "lucide-react";
 
 const Nav = () => {
@@ -6,14 +7,21 @@ const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [productsMenuOpen, setProductsMenuOpen] = useState(false);
   const productsMenuTimeout = React.useRef();
+  const location = useLocation(); // Get current route
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100); // 3 feet ≈ 900px
+      setScrolled(window.scrollY > 300);
     };
-    window.addEventListener("scroll", handleScroll);
+    if (location.pathname === "/") {
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
+    } else {
+      setScrolled(false);
+      window.removeEventListener("scroll", handleScroll);
+    }
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const handleProductsMenuEnter = () => {
     clearTimeout(productsMenuTimeout.current);
@@ -26,13 +34,17 @@ const Nav = () => {
     }, 120); // small delay for smoothness
   };
 
+  // Determine nav background
+  const navBg =
+    location.pathname === "/"
+      ? scrolled
+        ? "bg-white"
+        : "bg-gradient-to-t from-[#f3e8ff] via-[#fff3ff] to-white"
+      : "bg-white";
+
   return (
     <nav
-      className={`sticky top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 flex justify-between items-center backdrop-blur-xl transition-colors duration-300 ${
-        scrolled
-          ? "bg-white"
-          : "bg-gradient-to-t from-[#f3e8ff] via-[#fff3ff] to-white"
-      }`}
+      className={`sticky top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 flex justify-between items-center backdrop-blur-xl transition-colors duration-300 ${navBg}`}
     >
       {/* Logo */}
       <div className="text-2xl sm:text-3xl font-bold text-gradient">
@@ -213,8 +225,8 @@ const Nav = () => {
             </div>
           </div>
         </div>
-        <a href="/services" className="hover:text-purple-600 transition">
-          Services
+        <a href="/Careers" className="hover:text-purple-600 transition">
+          Careers
         </a>
         <a href="/contact" className="hover:text-purple-600 transition">
           Contact
