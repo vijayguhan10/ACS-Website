@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6 gap-12">
           {/* Left: Text */}
           <div className="flex-1">
-            <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-3xl  sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Start Building Awesome Websites
               <br />
               Today

@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [productsMenuOpen, setProductsMenuOpen] = useState(false);
+  const productsMenuTimeout = React.useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +14,17 @@ const Nav = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleProductsMenuEnter = () => {
+    clearTimeout(productsMenuTimeout.current);
+    setProductsMenuOpen(true);
+  };
+
+  const handleProductsMenuLeave = () => {
+    productsMenuTimeout.current = setTimeout(() => {
+      setProductsMenuOpen(false);
+    }, 120); // small delay for smoothness
+  };
 
   return (
     <nav
@@ -31,9 +44,175 @@ const Nav = () => {
         <a href="/" className="hover:text-purple-600 transition">
           Home
         </a>
-        <a href="/products" className="hover:text-purple-600 transition">
-          Our Products
-        </a>
+        {/* Products Dropdown */}
+        <div
+          className="relative group"
+          onMouseEnter={handleProductsMenuEnter}
+          onMouseLeave={handleProductsMenuLeave}
+          onFocus={handleProductsMenuEnter}
+          onBlur={handleProductsMenuLeave}
+        >
+          <a
+            href="/products"
+            className="hover:text-purple-600 transition"
+            tabIndex={0}
+          >
+            Our Products
+          </a>
+          {/* Mega Menu */}
+          <div
+            className={`absolute -left-12 -translate-x-1/2 top-full mt-3 w-[600px] bg-white rounded-xl shadow-2xl border border-gray-200 p-6  flex z-50 transition-opacity duration-200
+              ${
+                productsMenuOpen
+                  ? "opacity-100 pointer-events-auto"
+                  : "opacity-0 pointer-events-none"
+              }`}
+            tabIndex={-1}
+            onMouseEnter={handleProductsMenuEnter}
+            onMouseLeave={handleProductsMenuLeave}
+          >
+            {/* For Merchants */}
+            <div className="flex-1 pr-6 border-r border-dotted border-gray-300 relative">
+              <div className="text-xs font-semibold text-gray-500 mb-2 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-gray-400 inline-block"></span>
+                FOR MERCHANTS
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <a
+                    href="#"
+                    className="font-semibold text-blue-700 block mb-1"
+                  >
+                    QR UPI
+                  </a>
+                  <div className="text-xs text-gray-500">
+                    Comprises a diverse range of products designed
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    className="font-semibold text-gray-800 block mb-1"
+                  >
+                    Cards
+                  </a>
+                  <div className="text-xs text-gray-500">
+                    Comprises a diverse range of products designed
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    className="font-semibold text-gray-800 block mb-1"
+                  >
+                    Sound box
+                  </a>
+                  <div className="text-xs text-gray-500">
+                    Comprises a diverse range of products designed
+                  </div>
+                </div>
+              </div>
+              {/* Decorative SVGs in bottom right for aesthetic feel */}
+              <svg
+                className="absolute bottom-2 right-2 w-10 h-10 opacity-20 pointer-events-none"
+                viewBox="0 0 48 48"
+                fill="none"
+              >
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="20"
+                  stroke="#bdbdbd"
+                  strokeWidth="2"
+                />
+              </svg>
+              <svg
+                className="absolute bottom-6 right-8 w-6 h-6 opacity-10 pointer-events-none"
+                viewBox="0 0 48 48"
+                fill="none"
+              >
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="16"
+                  stroke="#bdbdbd"
+                  strokeWidth="2"
+                />
+              </svg>
+              <svg
+                className="absolute bottom-12 right-4 w-4 h-4 opacity-10 pointer-events-none"
+                viewBox="0 0 48 48"
+                fill="none"
+              >
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="10"
+                  stroke="#bdbdbd"
+                  strokeWidth="2"
+                />
+              </svg>
+            </div>
+            {/* Point of Sale & Lending */}
+            <div className="flex-1 px-6 border-r border-dotted border-gray-300">
+              <div className="space-y-4 mt-7">
+                <div>
+                  <a
+                    href="#"
+                    className="font-semibold text-gray-800 block mb-1"
+                  >
+                    Point of sale
+                  </a>
+                  <div className="text-xs text-gray-500">
+                    Comprises a diverse range of products designed
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    className="font-semibold text-gray-800 block mb-1"
+                  >
+                    Lending
+                  </a>
+                  <div className="text-xs text-gray-500">
+                    Comprises a diverse range of products designed
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Solution */}
+            <div className="flex-1 pl-6">
+              <div className="text-xs font-semibold text-gray-500 mb-2 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-gray-400 inline-block"></span>
+                SOLUTION
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <a
+                    href="#"
+                    className="font-semibold text-gray-800 block mb-1"
+                  >
+                    Sense
+                  </a>
+                  <div className="text-xs text-gray-500">
+                    Identify the Good from the Bad visitors
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    className="font-semibold text-gray-800 block mb-1"
+                  >
+                    Techfini
+                  </a>
+                  <div className="text-xs text-gray-500">
+                    Comprises a diverse range of products designed
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <a href="/services" className="hover:text-purple-600 transition">
           Services
         </a>
