@@ -39,7 +39,7 @@ const Nav = () => {
     location.pathname === "/"
       ? scrolled
         ? "bg-white"
-        : "bg-gradient-to-t from-[#f3e8ff] via-[#fff3ff] to-white"
+        : "bg-gradient-to-t from-[#f4eaff] via-white to-white"
       : "bg-white";
 
   return (

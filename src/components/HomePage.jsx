@@ -4,48 +4,48 @@ import Acs from "./../assets/ACS.jpg";
 import { FaBrain, FaUsers, FaLock, FaBolt } from "react-icons/fa";
 
 const stats = [
-  { value: "30", label: "Our Experience" },
-  { value: "2m", label: "Scans per day" },
-  { value: "4k", label: "Top domains secured" },
-  { value: "96%", label: "Client satisfaction" },
+  { value: "50+", label: "ERP Projects Delivered" },
+  { value: "10+", label: "Industries Served" },
+  { value: "99.9%", label: "Uptime & Reliability" },
+  { value: "100%", label: "Client Satisfaction" },
 ];
 
 const features = [
-  { label: "Expert Problem Solve", icon: <FaBrain /> },
-  { label: "Expert Team Members", icon: <FaUsers /> },
-  { label: "Security Management", icon: <FaLock /> },
-  { label: "Identifying Threats Quick", icon: <FaBolt /> },
+  { label: "Custom ERP Development", icon: <FaBrain /> },
+  { label: "Expert Software Team", icon: <FaUsers /> },
+  { label: "Secure Cloud Solutions", icon: <FaLock /> },
+  { label: "Rapid Implementation", icon: <FaBolt /> },
 ];
 
 const HomePage = () => (
   <div className="min-h-screen bg-white ">
     {/* Hero Section with subtle gradient */}
-    <section className="w-full bg-gradient-to-b from-[#f3e8ff] via-white to-white pt-12 pb-4">
+    <section className="w-full bg-gradient-to-b from-[#f4eaff] via-white to-white pt-12 pb-4">
       <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
         {/* Content */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
           <span className="block text-sm font-semibold text-purple-600 mb-2 tracking-wide">
-            Cyber Security Solutions
+            ERP & AI-Driven Software Solutions
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-            We Offer Cyber Security Solution
+            Empowering Businesses with
             <br />
-            to Safeguard
+            ERP & AI Integrations
           </h1>
           <p className="text-gray-700 mb-6 text-base sm:text-lg max-w-md">
-            Our cyber security solutions are meticulously designed to fortify
-            your digital infrastructure against evolving threats.
+            ACS builds secure, scalable ERP solutions with AI integrations to
+            automate, optimize, and grow your business.
           </p>
           <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl shadow transition">
-            How it Works
+            Discover Our ERP & AI Expertise
           </button>
         </div>
         {/* Illustration */}
-        <div className=" justify-center items-center">
-          <div className="">
+        <div className="flex justify-center items-center">
+          <div>
             <img
-              src={erpimage}
-              alt="Cyber Security Illustration"
+              src="https://img.freepik.com/3d-models/v2/E/R/X/R/K/T/E/ERXRKTEZ/seo-dashboard-analytics-icon-poster-2.png?t=st=1752811841~exp=1752815441~hmac=05991eb33f1a096092cf0ebb1abd029fbfed122610db1cec2aad63bb27770777&w=1000"
+              alt="ERP & AI Software Illustration"
               className="w-96 h-96 sm:w-80 sm:h-80 object-contain"
             />
           </div>
@@ -76,24 +76,25 @@ const HomePage = () => (
         <div className="flex-1 flex justify-center items-center md:mb-0">
           <img
             src={Acs}
-            alt="Company Illustration"
+            alt="ACS Team"
             className="w-40 h-40 sm:w-64 sm:h-64 object-contain"
           />
         </div>
         {/* Content */}
         <div className="flex-1">
           <span className="block text-sm font-semibold text-purple-600 mb-2 tracking-wide">
-            About Our Company
+            About ACS
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight text-gray-900">
-            Over 30+ Years Skills
+            Your Trusted Partner in
             <br />
-            Cyber Company
+            Software Development
           </h2>
           <p className="mb-6 text-base sm:text-lg max-w-md text-gray-700">
-            Protecting homes and families is our top priority. Residential
-            security services include state systems and proactive threat
-            management.
+            With decades of experience, ACS delivers robust ERP and software
+            solutions that optimize business processes and enable digital
+            transformation. Our human-centric approach ensures every solution is
+            intuitive and easy to use.
           </p>
           <div className="grid grid-cols-2 gap-4 mb-6">
             {features.map((feature) => (

@@ -4,20 +4,20 @@ const cards = [
   {
     bg: "bg-[#f3f3ff]",
     img: "https://framerusercontent.com/images/xASeFHdEdorYpfxRO7gNNTyfdE.png?scale-down-to=512",
-    title: "Digital Marketing",
-    desc: "Improve search position with our expert strategies. Boost rankings, increase visibility, and drive organic traffic.",
+    title: "ERP Solutions",
+    desc: "Custom ERP systems to automate, optimize, and scale your business processes.",
   },
   {
     bg: "bg-[#f3fff7]",
     img: "https://framerusercontent.com/images/e3bwptZrEnQjz31UxxYMKcZqD4.png?scale-down-to=512",
-    title: "Websites & Ecommerce",
-    desc: "Reach your target market effectively. Identify, engage, and convert your ideal customers with precision.",
+    title: "SaaS Product Development",
+    desc: "Tailored SaaS products designed for your unique business needs and seamless user experience.",
   },
   {
     bg: "bg-[#fff7f3]",
     img: "https://framerusercontent.com/images/cbSNKdqQLqZn6pmHYq0HZF5rKgw.png?scale-down-to=512",
-    title: "Consultations",
-    desc: "Unlock success with the best strategy. Achieve your goals, outperform competitors, and maximize results.",
+    title: "ML Integrations & Projects",
+    desc: "Machine learning solutions and integrations to unlock data-driven insights and automation.",
   },
 ];
 
@@ -25,14 +25,11 @@ const Section2 = () => (
   <div className="py-12 px-2 sm:px-6">
     <div className="mx-auto text-center">
       <h1 className="text-2xl sm:text-4xl font-primary font-bold text-gray-900 mb-6">
-        Unleash the Power of Our AI Innovations
+        ERP, SaaS & ML Solutions for Modern Business
       </h1>
       <p className="text-base sm:text-lg text-gray-600 mb-8">
-        From data processing to intelligent automation, our AI solutions
-        seamlessly integrate into your
-        <br className="hidden sm:block" />
-        existing infrastructure, empowering you to make smarter, faster
-        decisions.
+        ACS delivers ERP, customized SaaS products, and machine learning
+        integrations to help your business grow smarter and faster.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 xl:w-[75%] mx-auto items-stretch">

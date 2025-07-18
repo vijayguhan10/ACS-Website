@@ -9,16 +9,17 @@ const Section3 = () => {
           <div>
             <div className="flex items-center gap-2 text-indigo-600 mb-4">
               <Code2 className="w-5 h-5" />
-              <span className="font-medium">Our services</span>
+              <span className="font-medium">Our Expertise</span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-bold mb-4 max-w-xl">
-              Professional Services That Showcase Our Expertise.
+              End-to-End Software & ERP Solutions
             </h1>
           </div>
           <p className="text-gray-600 text-base sm:text-xl mt-4 sm:mt-16">
-            From creative design to technical solutions, our
-            <br className="hidden sm:block" /> services define industry
-            excellence.
+            We design, develop, and optimize software that transforms
+            businesses.
+            <br className="hidden sm:block" /> Discover our full-stack ERP and
+            digital solutions.
           </p>
         </div>
 
@@ -26,38 +27,38 @@ const Section3 = () => {
           <div className="bg-[#c7c1c12f] p-6 rounded-3xl">
             <img
               src="https://technastic.com/wp-content/uploads/2020/05/black-edition-v2-minu-dark-samsung-theme.jpg"
-              alt="SaaS Products"
+              alt="ERP Solutions"
               className="w-full h-40 sm:h-48 object-cover rounded-lg mb-4"
             />
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
-              SaaS Products
+              ERP Solutions
             </h2>
             <p className="text-gray-600 text-sm sm:text-base">
-              We offer scalable SaaS products that streamline operations,
-              enhance user experience, and provide efficient solutions tailored
-              to your business needs.
+              Custom ERP systems that integrate seamlessly with your business,
+              automate processes, and provide actionable insights.
             </p>
           </div>
           <div className="bg-[#7976f72f] p-6 rounded-3xl h-auto">
             <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
-              Outstaffing of IT specialists and project teams
+              Software Development
             </h2>
             <p className="text-gray-600 text-sm sm:text-base">
-              We select specialists and connect them to projects in 48 hours.
+              From web apps to enterprise platforms, our team delivers robust,
+              scalable, and SEO-optimized software.
             </p>
           </div>
           <div className="bg-[#f7e1732f] p-6 rounded-3xl h-auto">
             <img
               src="https://framerusercontent.com/images/AqfUcDzKyJ9nuBlLjaa550Rzo.png?scale-down-to=512"
-              alt="SaaS Products"
+              alt="SEO Optimization"
               className="w-full h-40 sm:h-48 object-cover rounded-lg mb-4"
             />
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
-              SaaS Products
+              SEO Optimization
             </h2>
             <p className="text-gray-600 text-sm sm:text-base">
-              We offer scalable SaaS products that streamline operations,
-              enhance user experience, and provide efficient solutions.
+              We ensure your digital solutions are discoverable and rank high on
+              search engines, driving more traffic to your business.
             </p>
           </div>
 
