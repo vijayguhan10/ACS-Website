@@ -1,5 +1,3 @@
-import React from "react";
-
 const cards = [
   {
     tag: "AI transformation",
@@ -39,10 +37,96 @@ const cardBg = [
 
 const Section4 = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-2 sm:px-4">
+    <div className="relative flex flex-col items-center justify-center px-2 sm:px-4 overflow-hidden">
+      {/* Top left blue ball with path */}
+      <div className="hidden lg:block absolute top-4 left-0 z-0">
+        <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
+          <circle cx="20" cy="20" r="12" fill="#7c4dff" />
+          <path
+            d="M0 20 Q10 10 20 20 Q30 30 40 20 Q50 10 60 20"
+            stroke="#b39ddb"
+            strokeWidth="3"
+            fill="none"
+            opacity="0.5"
+          />
+        </svg>
+      </div>
+      {/* Top right purple semi-circle */}
+      <div className="hidden lg:block absolute top-2 right-0 z-0">
+        <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
+          <path
+            d="M30 0 A30 30 0 0 1 60 30"
+            stroke="#b39ddb"
+            strokeWidth="6"
+            fill="none"
+            opacity="0.4"
+          />
+        </svg>
+      </div>
+      {/* Bottom left yellow cube */}
+      <div className="hidden lg:block absolute left-10 bottom-8 z-0">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <polygon
+            points="30,5 55,20 55,50 30,65 5,50 5,20"
+            stroke="#b39ddb"
+            strokeWidth="3"
+            fill="#fffbe7"
+            opacity="0.7"
+          />
+          <polygon
+            points="30,5 55,20 30,35 5,20"
+            fill="#fde047"
+            stroke="#b39ddb"
+            strokeWidth="2"
+            opacity="0.6"
+          />
+        </svg>
+      </div>
+      {/* Bottom right green cylinder */}
+      <div className="hidden lg:block absolute right-0 bottom-8 z-0">
+        <svg width="80" height="40" viewBox="0 0 80 40" fill="none">
+          <ellipse
+            cx="70"
+            cy="20"
+            rx="10"
+            ry="10"
+            fill="#22c55e"
+            stroke="#b39ddb"
+            strokeWidth="3"
+            opacity="0.18"
+          />
+          <line
+            x1="10"
+            y1="10"
+            x2="70"
+            y2="20"
+            stroke="#b39ddb"
+            strokeWidth="3"
+            opacity="0.18"
+          />
+          <line
+            x1="10"
+            y1="30"
+            x2="70"
+            y2="20"
+            stroke="#b39ddb"
+            strokeWidth="3"
+            opacity="0.18"
+          />
+          <line
+            x1="10"
+            y1="10"
+            x2="10"
+            y2="30"
+            stroke="#b39ddb"
+            strokeWidth="3"
+            opacity="0.18"
+          />
+        </svg>
+      </div>
       <h1 className="text-xl sm:text-3xl text-center font-bold mb-8 mt-6 max-w-2xl">
-        ACS delivers ERP, SaaS, and ML-based software solutions that are
-        easy to use.
+        ACS delivers ERP, SaaS, and ML-based software solutions that are easy to
+        use.
       </h1>
       <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8">
         {cards.map((card, idx) => (
