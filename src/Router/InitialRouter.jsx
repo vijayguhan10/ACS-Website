@@ -12,7 +12,6 @@ const InitialRouter = () => (
       <Route path="/" element={<HomeRender />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/careers" element={<Careers />} />
-      {/* Add more routes as needed */}
     </Routes>
     <Footer />
   </Router>

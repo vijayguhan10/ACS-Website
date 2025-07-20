@@ -65,7 +65,7 @@ const Nav = () => {
           onBlur={handleProductsMenuLeave}
         >
           <a
-            href="/products"
+            href="/"
             className="hover:text-purple-600 transition"
             tabIndex={0}
           >
@@ -297,11 +297,11 @@ const Nav = () => {
                   Our Products
                 </a>
                 <a
-                  href="/services"
+                  href="/Careers"
                   onClick={() => setMenuOpen(false)}
                   className="text-gray-800 hover:text-purple-600 transition py-2 border-b border-gray-200"
                 >
-                  Services
+                  Careers
                 </a>
                 <a
                   href="/contact"
