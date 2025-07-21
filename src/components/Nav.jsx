@@ -7,7 +7,7 @@ const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [productsMenuOpen, setProductsMenuOpen] = useState(false);
   const productsMenuTimeout = React.useRef();
-  const location = useLocation(); // Get current route
+  const location = useLocation(); 
 
   useEffect(() => {
     const handleScroll = () => {
