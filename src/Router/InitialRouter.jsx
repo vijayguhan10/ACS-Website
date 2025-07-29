@@ -5,11 +5,13 @@ import Footer from "../components/Footer";
 import HomeRender from "../components/HomeRender";
 import Contact from "../components/Contact";
 import Careers from "../components/Careers";
+import ViewProducts from "../components/viewproducts/ViewProductsHome";
 const InitialRouter = () => (
   <Router>
     <Nav />
     <Routes>
       <Route path="/" element={<HomeRender />} />
+      <Route path="/viewproducts" element={<ViewProducts />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/careers" element={<Careers />} />
     </Routes>
