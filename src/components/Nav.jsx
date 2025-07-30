@@ -7,13 +7,13 @@ const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [productsMenuOpen, setProductsMenuOpen] = useState(false);
   const productsMenuTimeout = React.useRef();
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 300);
     };
-    if (location.pathname === "/") {
+    if (location.pathname === "/" || location.pathname === "/viewproducts") {
       window.addEventListener("scroll", handleScroll);
       handleScroll();
     } else {
@@ -36,7 +36,7 @@ const Nav = () => {
 
   // Determine nav background
   const navBg =
-    location.pathname === "/"
+    location.pathname === "/"||location.pathname === "/viewproducts"
       ? scrolled
         ? "bg-white"
         : "bg-gradient-to-t from-[#f4eaff] via-white to-white"
@@ -64,16 +64,12 @@ const Nav = () => {
           onFocus={handleProductsMenuEnter}
           onBlur={handleProductsMenuLeave}
         >
-          <a
-            href="/"
-            className="hover:text-purple-600 transition"
-            tabIndex={0}
-          >
+          <a href="/" className="hover:text-purple-600 transition" tabIndex={0}>
             Our Products
           </a>
           {/* Mega Menu */}
           <div
-            className={`absolute -left-12 -translate-x-1/2 top-full mt-3 w-[600px] bg-white rounded-xl shadow-2xl border border-gray-200 p-6  flex z-50 transition-opacity duration-200
+            className={`absolute -left-12 -translate-x-1/2 top-full mt-3 w-[560px] bg-white rounded-xl shadow-2xl border border-gray-200 p-4 flex z-50 transition-opacity duration-200
               ${
                 productsMenuOpen
                   ? "opacity-100 pointer-events-auto"
@@ -83,50 +79,50 @@ const Nav = () => {
             onMouseEnter={handleProductsMenuEnter}
             onMouseLeave={handleProductsMenuLeave}
           >
-            {/* For Merchants */}
-            <div className="flex-1 pr-6 border-r border-dotted border-gray-300 relative">
+            {/* ERP & Business Solutions */}
+            <div className="flex-1 pr-4 border-r border-dotted border-gray-300 relative">
               <div className="text-xs font-semibold text-gray-500 mb-2 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-gray-400 inline-block"></span>
-                FOR MERCHANTS
+                <span className="w-2 h-2 rounded-full bg-blue-500 inline-block"></span>
+                ERP & BUSINESS
               </div>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div>
                   <a
                     href="#"
-                    className="font-semibold text-blue-700 block mb-1"
+                    className="font-semibold text-blue-700 block mb-1 text-sm whitespace-nowrap"
                   >
-                    QR UPI
+                    InvoTrack
                   </a>
-                  <div className="text-xs text-gray-500">
-                    Comprises a diverse range of products designed
+                  <div className="text-xs text-gray-500 leading-tight">
+                    Billing & inventory management
                   </div>
                 </div>
                 <div>
                   <a
                     href="#"
-                    className="font-semibold text-gray-800 block mb-1"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
                   >
-                    Cards
+                    LeadFlow CRM
                   </a>
-                  <div className="text-xs text-gray-500">
-                    Comprises a diverse range of products designed
+                  <div className="text-xs text-gray-500 leading-tight">
+                    Lead tracking with WhatsApp
                   </div>
                 </div>
                 <div>
                   <a
                     href="#"
-                    className="font-semibold text-gray-800 block mb-1"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
                   >
-                    Sound box
+                    LeaveEase
                   </a>
-                  <div className="text-xs text-gray-500">
-                    Comprises a diverse range of products designed
+                  <div className="text-xs text-gray-500 leading-tight">
+                    Automated leave management
                   </div>
                 </div>
               </div>
-              {/* Decorative SVGs in bottom right for aesthetic feel */}
+              {/* Decorative SVGs */}
               <svg
-                className="absolute bottom-2 right-2 w-10 h-10 opacity-20 pointer-events-none"
+                className="absolute bottom-1 right-1 w-8 h-8 opacity-15 pointer-events-none"
                 viewBox="0 0 48 48"
                 fill="none"
               >
@@ -134,92 +130,69 @@ const Nav = () => {
                   cx="24"
                   cy="24"
                   r="20"
-                  stroke="#bdbdbd"
-                  strokeWidth="2"
-                />
-              </svg>
-              <svg
-                className="absolute bottom-6 right-8 w-6 h-6 opacity-10 pointer-events-none"
-                viewBox="0 0 48 48"
-                fill="none"
-              >
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="16"
-                  stroke="#bdbdbd"
-                  strokeWidth="2"
-                />
-              </svg>
-              <svg
-                className="absolute bottom-12 right-4 w-4 h-4 opacity-10 pointer-events-none"
-                viewBox="0 0 48 48"
-                fill="none"
-              >
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="10"
-                  stroke="#bdbdbd"
+                  stroke="#bdbddb"
                   strokeWidth="2"
                 />
               </svg>
             </div>
-            {/* Point of Sale & Lending */}
-            <div className="flex-1 px-6 border-r border-dotted border-gray-300">
-              <div className="space-y-4 mt-7">
-                <div>
-                  <a
-                    href="#"
-                    className="font-semibold text-gray-800 block mb-1"
-                  >
-                    Point of sale
-                  </a>
-                  <div className="text-xs text-gray-500">
-                    Comprises a diverse range of products designed
-                  </div>
-                </div>
-                <div>
-                  <a
-                    href="#"
-                    className="font-semibold text-gray-800 block mb-1"
-                  >
-                    Lending
-                  </a>
-                  <div className="text-xs text-gray-500">
-                    Comprises a diverse range of products designed
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Solution */}
-            <div className="flex-1 pl-6">
+
+            {/* Specialized Solutions */}
+            <div className="flex-1 px-4 border-r border-dotted border-gray-300">
               <div className="text-xs font-semibold text-gray-500 mb-2 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-gray-400 inline-block"></span>
-                SOLUTION
+                <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
+                SPECIALIZED
               </div>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div>
                   <a
                     href="#"
-                    className="font-semibold text-gray-800 block mb-1"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
                   >
-                    Sense
+                    EventSync
                   </a>
-                  <div className="text-xs text-gray-500">
-                    Identify the Good from the Bad visitors
+                  <div className="text-xs text-gray-500 leading-tight">
+                    End-to-end event management
                   </div>
                 </div>
                 <div>
                   <a
                     href="#"
-                    className="font-semibold text-gray-800 block mb-1"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
                   >
-                    Techfini
+                    Revozen
                   </a>
-                  <div className="text-xs text-gray-500">
-                    Comprises a diverse range of products designed
+                  <div className="text-xs text-gray-500 leading-tight">
+                    Tyre center management
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Apps */}
+            <div className="flex-1 pl-4">
+              <div className="text-xs font-semibold text-gray-500 mb-2 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-purple-500 inline-block"></span>
+                MOBILE APPS
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <a
+                    href="#"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
+                  >
+                    4Trip
+                  </a>
+                  <div className="text-xs text-gray-500 leading-tight">
+                    Trip booking & management
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <a
+                    href="#"
+                    className="font-semibold text-purple-600 block text-sm whitespace-nowrap"
+                  >
+                    View All Products →
+                  </a>
                 </div>
               </div>
             </div>
