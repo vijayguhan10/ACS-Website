@@ -132,7 +132,7 @@ const Section4 = () => {
         {cards.map((card, idx) => (
           <div
             key={card.title}
-            className={`${cardBg[idx]} rounded-3xl shadow-2xl p-7 border border-gray-100 flex flex-col justify-between min-h-[180px] hover:scale-[1.025] transition-transform duration-200`}
+            className={`${cardBg[idx]} rounded-3xl  p-7 border border-gray-100 flex flex-col justify-between min-h-[180px] hover:scale-[1.025] transition-transform duration-200`}
           >
             <span className="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 inline-block w-fit">
               {card.tag}
