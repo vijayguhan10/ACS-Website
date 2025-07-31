@@ -35,16 +35,23 @@ const Nav = () => {
   };
 
   // Determine nav background
-  const navBg =
-    location.pathname === "/"||location.pathname === "/viewproducts"
-      ? scrolled
-        ? "bg-white"
-        : "bg-gradient-to-t from-[#f4eaff] via-white to-white"
-      : "bg-white";
 
   return (
     <nav
-      className={`sticky top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 flex justify-between items-center backdrop-blur-xl transition-colors duration-300 ${navBg}`}
+      className={`sticky top-0 left-0 w-full z-11 px-4 sm:px-6 py-4 flex justify-between items-center
+        rounded-b-2xl rounded-t-2xl mx-auto mt-2
+        backdrop-blur-xl bg-white/40 border border-white/30 shadow-xl
+        glassmorphism-nav transition-all duration-300
+        max-w-7xl
+      `}
+      style={{
+        // Extra glassmorphism: subtle border, shadow, and background blur
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.10)",
+        border: "1px solid rgba(255,255,255,0.25)",
+        background: "rgba(255,255,255,0.40)",
+        backdropFilter: "blur(16px) saturate(180%)",
+        WebkitBackdropFilter: "blur(16px) saturate(180%)",
+      }}
     >
       {/* Logo */}
       <div className="text-2xl sm:text-3xl font-bold text-gradient">
@@ -64,9 +71,12 @@ const Nav = () => {
           onFocus={handleProductsMenuEnter}
           onBlur={handleProductsMenuLeave}
         >
-          <a href="/" className="hover:text-purple-600 transition" tabIndex={0}>
+          <span
+            className="hover:text-purple-600 transition cursor-pointer"
+            tabIndex={0}
+          >
             Our Products
-          </a>
+          </span>
           {/* Mega Menu */}
           <div
             className={`absolute -left-12 -translate-x-1/2 top-full mt-3 w-[560px] bg-white rounded-xl shadow-2xl border border-gray-200 p-4 flex z-50 transition-opacity duration-200
@@ -88,8 +98,8 @@ const Nav = () => {
               <div className="space-y-3">
                 <div>
                   <a
-                    href="#"
-                    className="font-semibold text-blue-700 block mb-1 text-sm whitespace-nowrap"
+                    href="/viewproducts"
+                    className="font-semibold text-blue-700 block mb-1 text-sm whitespace-nowrap hover:text-blue-800 transition"
                   >
                     InvoTrack
                   </a>
@@ -99,8 +109,8 @@ const Nav = () => {
                 </div>
                 <div>
                   <a
-                    href="#"
-                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
+                    href="/viewproducts"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap hover:text-purple-600 transition"
                   >
                     LeadFlow CRM
                   </a>
@@ -110,8 +120,8 @@ const Nav = () => {
                 </div>
                 <div>
                   <a
-                    href="#"
-                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
+                    href="/viewproducts"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap hover:text-purple-600 transition"
                   >
                     LeaveEase
                   </a>
@@ -145,8 +155,8 @@ const Nav = () => {
               <div className="space-y-3">
                 <div>
                   <a
-                    href="#"
-                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
+                    href="/viewproducts"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap hover:text-purple-600 transition"
                   >
                     EventSync
                   </a>
@@ -156,8 +166,8 @@ const Nav = () => {
                 </div>
                 <div>
                   <a
-                    href="#"
-                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
+                    href="/viewproducts"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap hover:text-purple-600 transition"
                   >
                     Revozen
                   </a>
@@ -177,8 +187,8 @@ const Nav = () => {
               <div className="space-y-3">
                 <div>
                   <a
-                    href="#"
-                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap"
+                    href="/viewproducts"
+                    className="font-semibold text-gray-800 block mb-1 text-sm whitespace-nowrap hover:text-purple-600 transition"
                   >
                     4Trip
                   </a>
@@ -188,8 +198,8 @@ const Nav = () => {
                 </div>
                 <div className="mt-4">
                   <a
-                    href="#"
-                    className="font-semibold text-purple-600 block text-sm whitespace-nowrap"
+                    href="/viewproducts"
+                    className="font-semibold text-purple-600 block text-sm whitespace-nowrap hover:text-purple-700 transition"
                   >
                     View All Products →
                   </a>
@@ -263,7 +273,7 @@ const Nav = () => {
                   Home
                 </a>
                 <a
-                  href="/products"
+                  href="/viewproducts"
                   onClick={() => setMenuOpen(false)}
                   className="text-gray-800 hover:text-purple-600 transition py-2 border-b border-gray-200"
                 >
