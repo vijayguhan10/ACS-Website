@@ -18,9 +18,9 @@ const features = [
 ];
 
 const HomePage = () => (
-  <div className="min-h-screen bg-white relative overflow-hidden">
+  <div className="min-h-screen  -top-20 bg-transparent relative overflow-hidden">
     {/* Decorative SVGs */}
-    <div className="hidden lg:block absolute top-0 left-0 z-0">
+    <div className="hidden lg:block absolute top-100 left-10 z-0">
       <svg width="90" height="90" viewBox="0 0 60 60" fill="none">
         <polygon
           points="30,5 55,20 55,50 30,65 5,50 5,20"
@@ -159,9 +159,9 @@ const HomePage = () => (
       </svg>
     </div>
     {/* Main Content */}
-    <section className="relative z-10 w-full bg-gradient-to-b from-[#f4eaff] via-white to-white pt-12 pb-4">
+    <section className="xl:top-20 w-full bg-gradient-to-b from-[#f4eaff] via-white to-white pt-12 pb-4">
       {/* Hero Section with subtle gradient */}
-      <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+      <div className="max-w-5xl mt-32 mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
         {/* Content */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
           <span className="block text-sm font-semibold text-purple-600 mb-2 tracking-wide">
