@@ -8,7 +8,7 @@ const ViewProductIndex = () => {
       <WhyProduct />
       <CustomerFeedback />
     </div>
-  )
-}
+  );
+};
 
-export default ViewProductIndex
+export default ViewProductIndex;

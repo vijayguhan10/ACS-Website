@@ -38,8 +38,8 @@ const Nav = () => {
 
   return (
     <nav
-      className={`sticky top-0 left-0 w-full z-11 px-4 sm:px-6 py-4 flex justify-between items-center
-        rounded-b-2xl rounded-t-2xl mx-auto mt-2
+      className={`sticky top-0 h-20 left-0 w-full z-11 px-4 sm:px-6 py-4 flex justify-between items-center
+        rounded-b-2xl rounded-t-2xl mx-auto mt-
         backdrop-blur-xl  
         glassmorphism-nav transition-all duration-300
         max-w-7xl

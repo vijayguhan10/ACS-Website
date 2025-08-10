@@ -69,7 +69,7 @@ const lineOptions = {
 
 export default function ViewProductsHome() {
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center  bg-gradient-to-b from-[#f4eaff] via-white to-white font-primary overflow-hidden">
+    <div className="relative -top-20  min-h-screen w-full flex items-center justify-center  bg-gradient-to-b from-[#f4eaff] via-white to-white font-primary overflow-hidden">
       {/* BUBBLE BACKGROUND */}
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-purple-300 rounded-full opacity-30 blur-[120px] z-0" />
       <div className="absolute -bottom-36 -right-36 w-[400px] h-[400px] bg-purple-200 rounded-full opacity-20 blur-[100px] z-0" />
