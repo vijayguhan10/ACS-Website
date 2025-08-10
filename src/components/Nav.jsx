@@ -40,15 +40,14 @@ const Nav = () => {
     <nav
       className={`sticky top-0 left-0 w-full z-11 px-4 sm:px-6 py-4 flex justify-between items-center
         rounded-b-2xl rounded-t-2xl mx-auto mt-2
-        backdrop-blur-xl bg-white/40 border border-white/30 shadow-xl
+        backdrop-blur-xl  
         glassmorphism-nav transition-all duration-300
         max-w-7xl
       `}
       style={{
         // Extra glassmorphism: subtle border, shadow, and background blur
-        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.10)",
-        border: "1px solid rgba(255,255,255,0.25)",
-        background: "rgba(255,255,255,0.40)",
+   
+        // background: "rgba(255,255,255,0.40)",
         backdropFilter: "blur(16px) saturate(180%)",
         WebkitBackdropFilter: "blur(16px) saturate(180%)",
       }}
@@ -56,6 +55,9 @@ const Nav = () => {
       {/* Logo */}
       <div className="text-2xl sm:text-3xl font-bold text-gradient">
         Autom Consultancy <span className="text-purple-600">ACS</span>
+        <span className="block text-xs sm:text-sm font-semibold text-purple-600 mb-2 tracking-wide">
+            Simplify Processes, Amplify Efficiency
+          </span>
       </div>
 
       {/* Desktop Menu */}

@@ -1,7 +1,4 @@
-import React from "react";
-import erpimage from "./../assets/image.png";
-import Acs from "./../assets/ACS.jpg";
-import { FaBrain, FaUsers, FaLock, FaBolt } from "react-icons/fa";
+import AnimatedPipelineFlow from "./AnimatedPipelineFlow";
 
 const stats = [
   { value: "50+", label: "ERP Projects Delivered" },
@@ -10,15 +7,65 @@ const stats = [
   { value: "100%", label: "Client Satisfaction" },
 ];
 
-const features = [
-  { label: "Custom ERP Development", icon: <FaBrain /> },
-  { label: "Expert Software Team", icon: <FaUsers /> },
-  { label: "Secure Cloud Solutions", icon: <FaLock /> },
-  { label: "Rapid Implementation", icon: <FaBolt /> },
-];
+const HandwrittenHeading = () => (
+  <div className="text-center flex flex-col items-center md:text-left">
+    <h2
+      style={{
+        fontFamily: "'Caveat', cursive",
+        fontSize: "2.2rem",
+        fontWeight: 700,
+        color: "#1a202c",
+        lineHeight: 1.2,
+        position: "relative",
+        display: "inline-block",
+      }}
+    >
+      Tout votre business sur{" "}
+      <span
+        style={{
+          background: "#fbbf24",
+          borderRadius: "0.5em 0.2em 0.5em 0.2em",
+          padding: "0.1em 0.3em",
+          boxDecorationBreak: "clone",
+          color: "#1a202c",
+        }}
+      >
+        une plateforme.
+      </span>
+    </h2>
+    <span
+      style={{
+        fontFamily: "'Caveat', cursive",
+        fontSize: "1.5rem",
+        color: "#1a202c",
+        fontWeight: 500,
+        position: "relative",
+        display: "inline-block",
+        marginTop: "0.3em",
+        textAlign: "center",
+      }}
+      className="mx-auto"
+    >
+      Simple, efficace, et abordable!
+      <span
+        style={{
+          position: "absolute",
+          left: 0,
+          bottom: -8,
+          width: "100%",
+          height: "8px",
+          background: "#0ea5e9",
+          borderRadius: "4px",
+          zIndex: -1,
+          opacity: 0.7,
+        }}
+      />
+    </span>
+  </div>
+);
 
 const HomePage = () => (
-  <div className="min-h-screen  -top-20 bg-transparent relative overflow-hidden">
+  <div className=" -top-28 bg-transparent relative overflow-hidden">
     {/* Decorative SVGs */}
     <div className="hidden lg:block absolute top-100 left-10 z-0">
       <svg width="90" height="90" viewBox="0 0 60 60" fill="none">
@@ -161,38 +208,32 @@ const HomePage = () => (
     {/* Main Content */}
     <section className="xl:top-20 w-full bg-gradient-to-b from-[#f4eaff] via-white to-white pt-12 pb-4">
       {/* Hero Section with subtle gradient */}
-      <div className="max-w-5xl mt-32 mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+      <div className="max-w-5xl mt-12 mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
         {/* Content */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-          <span className="block text-sm font-semibold text-purple-600 mb-2 tracking-wide">
-            ERP & AI-Driven Software Solutions
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-            Empowering Businesses with
+          
+          <h1 className="text-2xl sm:text-xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+            Empowering Businesses 
             <br />
             ERP & AI Integrations
           </h1>
-          <p className="text-gray-700 mb-6 text-base sm:text-lg max-w-md">
+          <p className="text-gray-700 mb-6 text-sm sm:text-base max-w-md">
             ACS builds secure, scalable ERP solutions with AI integrations to
             automate, optimize, and grow your business.
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl shadow transition">
+          <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3  rounded-xl shadow transition text-sm sm:text-base">
             Discover Our ERP & AI Expertise
           </button>
         </div>
-        {/* Illustration */}
-        <div className="flex justify-center items-center">
-          <div>
-            <img
-              src="https://img.freepik.com/3d-models/v2/E/R/X/R/K/T/E/ERXRKTEZ/seo-dashboard-analytics-icon-poster-2.png?t=st=1752811841~exp=1752815441~hmac=05991eb33f1a096092cf0ebb1abd029fbfed122610db1cec2aad63bb27770777&w=1000"
-              alt="ERP & AI Software Illustration"
-              className="w-96 h-96 sm:w-80 sm:h-80 object-contain "
-            />
+        {/* Animated ERP Pipeline Flow */}
+        <div className="flex-1 flex justify-center items-center">
+          <div className="w-full max-w-[95vw] sm:max-w-[500px] h-[180px] sm:h-[340px]">
+            <AnimatedPipelineFlow />
           </div>
         </div>
       </div>
       {/* Stats */}
-      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 xl:mt-8 px-4">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 px-4">
         {stats.map((stat) => (
           <div
             key={stat.label}
@@ -208,46 +249,12 @@ const HomePage = () => (
         ))}
       </div>
     </section>
-
-    {/* About Section */}
-    <section className=" py-4 px-4">
-      <div className="max-w-5xl mx-auto rounded-3xl shadow-xl bg-white p-4 flex flex-col md:flex-row items-center gap-8">
-        {/* Illustration */}
-        <div className="flex-1 flex justify-center items-center md:mb-0">
-          <img
-            src={Acs}
-            alt="ACS Team"
-            className="w-40 h-40 sm:w-64 sm:h-64 object-contain"
-          />
+    <section className="py-4 px-4">
+      <div className="max-w-5xl mx-auto  bg-white p-4 flex flex-col md:flex-row items-center ">
+        <div className="w-full">
+          <HandwrittenHeading />
         </div>
-        {/* Content */}
-        <div className="flex-1">
-          <span className="block text-sm font-semibold text-purple-600 mb-2 tracking-wide">
-            About ACS
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight text-gray-900">
-            Your Trusted Partner in
-            <br />
-            Software Development
-          </h2>
-          <p className="mb-6 text-base sm:text-lg max-w-md text-gray-700">
-            With decades of experience, ACS delivers robust ERP and software
-            solutions that optimize business processes and enable digital
-            transformation. Our human-centric approach ensures every solution is
-            intuitive and easy to use.
-          </p>
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            {features.map((feature) => (
-              <div key={feature.label} className="flex items-center gap-2">
-                {feature.icon}
-                <span className="text-sm text-gray-800">{feature.label}</span>
-              </div>
-            ))}
-          </div>
-          <button className="bg-purple-50 hover:bg-purple-100 text-purple-700 font-semibold px-6 py-3 rounded-xl shadow transition">
-            Learn More &rarr;
-          </button>
-        </div>
+        {/* ...rest of your About ACS card... */}
       </div>
     </section>
   </div>

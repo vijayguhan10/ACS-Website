@@ -64,7 +64,7 @@ function GradientCard({ card, idx }) {
   const bgRef = useRef(null);
 
   useEffect(() => {
-    // Set initial gradient
+  
     if (bgRef.current) {
       bgRef.current.style.background = gradients[idx](angleRef.current);
     }
