@@ -70,7 +70,7 @@ const HandwrittenHeading = () => (
 );
 
 const HomePage = () => (
-  <div className="-top-10 xl:-top-28 bg-transparent relative overflow-hidden">
+  <div className="-top-8 xl:-top-28 bg-transparent relative overflow-hidden">
     {/* Decorative SVGs - now responsive for mobile */}
     <div className="absolute top-10 left-4 z-0 w-16 h-16 sm:w-[90px] sm:h-[90px]">
       <svg width="100%" height="100%" viewBox="0 0 60 60" fill="none">
@@ -216,7 +216,7 @@ const HomePage = () => (
         </svg>
       </div>
     </div>
-    <section className="w-full bg-gradient-to-b from-[#f4eaff] md:via-white via-[#f4edfc31] md:to-white to-[#f3eef821] pt-20 pb-12">
+    <section className="w-full bg-gradient-to-b xl:from-[#f4eaff] from-[#f4edfc5e]  md:via-white via-[#f4edfc4c] md:to-white to-[#f3eef83e] pt-20 pb-12">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-16">
         <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
           <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
