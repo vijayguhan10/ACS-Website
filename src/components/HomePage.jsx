@@ -216,7 +216,7 @@ const HomePage = () => (
         </svg>
       </div>
     </div>
-    <section className="w-full bg-gradient-to-b from-[#f4eaff] via-white to-white pt-20 pb-12">
+    <section className="w-full bg-gradient-to-b from-[#f4eaff] md:via-white via-[#f4edfc31] md:to-white to-[#f3eef821] pt-20 pb-12">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-16">
         <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
           <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
@@ -237,7 +237,7 @@ const HomePage = () => (
           {/* Video: visible only on small screens */}
           <div className="border border-white h-[125px] sm:hidden flex items-center justify-center">
             <video
-              className="w-full h-full object-contain rounded-xl bg-white"
+              className="w-full h-full object-contain rounded-xl "
               autoPlay
               loop
               muted
