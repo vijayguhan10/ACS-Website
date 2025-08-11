@@ -129,7 +129,7 @@ const initialEdges = [
 
 const rfStyle = {
   width: "130%",
-  maxWidth: 1200,
+  maxWidth: 1500,
   height: 340,
   background: "transparent",
   border: "none",

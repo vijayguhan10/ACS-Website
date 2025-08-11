@@ -216,22 +216,19 @@ const HomePage = () => (
         </svg>
       </div>
     </div>
-    {/* Main Content */}
-    <section className="xl:top-20 w-full bg-gradient-to-b from-[#f4eaff] via-white to-white pt-12 pb-4">
-      {/* Hero Section with subtle gradient */}
-      <div className="max-w-5xl mt-12 mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-        {/* Content */}
-        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-          <h1 className="text-2xl sm:text-xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+    <section className="w-full bg-gradient-to-b from-[#f4eaff] via-white to-white pt-20 pb-12">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-16">
+        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+          <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
             Empowering Businesses
             <br />
             ERP & AI Integrations
           </h1>
-          <p className="text-gray-700 mb-6 text-sm sm:text-base max-w-md">
+          <p className="text-gray-700 mb-6 text-base sm:text-md max-w-md">
             ACS builds secure, scalable ERP solutions with AI integrations to
             automate, optimize, and grow your business.
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3  rounded-xl shadow transition text-sm sm:text-base">
+          <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-4 rounded-xl shadow transition text-base sm:text-lg">
             Discover Our ERP & AI Expertise
           </button>
         </div>
@@ -248,34 +245,32 @@ const HomePage = () => (
               <source src={smallscreenvideo} type="video/mp4" />
             </video>
           </div>
-          <div className="w-full max-w-[500px] h-[540px] hidden sm:block">
+          <div className="w-full max-w-[540px] h-[360px] hidden xl:block  items-center justify-center">
             <AnimatedPipelineFlow />
           </div>
         </div>
       </div>
-      {/* Stats */}
-      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 px-4">
+      <div className="max-w-6xl  grid xl:grid-cols-4 h-44 xl:h-10 mt-20 xl:m-auto  grid-cols-2 gap-6 px-4 ">
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="bg-white rounded-xl shadow p-6 flex flex-col items-center"
+            className="bg-white rounded-xl shadow w-full max-w-xs p-6 flex flex-col items-center"
           >
             <span className="text-2xl sm:text-3xl font-bold text-purple-600">
               {stat.value}
             </span>
-            <span className="text-gray-700 mt-2 text-sm text-center">
+            <span className="text-gray-700 mt-2 text-nowrap text-base text-center">
               {stat.label}
             </span>
           </div>
         ))}
       </div>
     </section>
-    <section className="py-4 px-4">
-      <div className="max-w-5xl mx-auto bg-white p-4 flex flex-col md:flex-row items-center">
+    <section className="py-10 px-4">
+      <div className="max-w-5xl mx-auto bg-white p-8 flex flex-col md:flex-row items-center">
         <div className="w-full">
           <HandwrittenHeading />
         </div>
-        {/* ...rest of your About ACS card... */}
       </div>
     </section>
   </div>

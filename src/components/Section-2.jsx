@@ -30,7 +30,7 @@ const features = [
   { label: "Rapid Implementation", icon: <FaBolt /> },
 ];
   return (
-    <div>
+    <div className="xl:relative xl:bottom-12">
       <section className=" py-4 px-4">
         <div className="max-w-5xl mx-auto rounded-3xl shadow-xl bg-white p-4 flex flex-col md:flex-row items-center gap-8">
           {/* Illustration */}
