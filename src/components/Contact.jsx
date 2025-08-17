@@ -34,14 +34,11 @@ const faqs = [
 const Contact = () => {
   return (
     <div className="relative min-h-screen  font-primary  pt-24 pb-12 overflow-x-hidden">
-      {/* Animated Gradient BG for Form */}
       <div className="pointer-events-none fixed top-0 left-0 w-full h-[600px] z-0">
         <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[700px] h-[700px] rounded-full  blur-3xl animate-pulse-slow" />
       </div>
 
-      {/* Top Section */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* Contact Info */}
         <div>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 flex items-center gap-3 text-gray-900">
             <Mail className="text-purple-600 w-9 h-9" /> Contact Us
