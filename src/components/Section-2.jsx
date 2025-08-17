@@ -3,6 +3,8 @@ import Acs from "./../assets/ACS.jpg";
 import { FaBrain, FaUsers, FaLock, FaBolt } from "react-icons/fa";
 
 const Section2 = () => {
+  console.log("Section2 rendered");
+
   const cards = [
     {
       bg: "bg-[#f3f3ff]",
@@ -33,7 +35,6 @@ const Section2 = () => {
     <div className="xl:relative xl:bottom-12">
       <section className=" py-4 px-4">
         <div className="max-w-5xl mx-auto rounded-3xl shadow-xl bg-white p-4 flex flex-col md:flex-row items-center gap-8">
-          {/* Illustration */}
           <div className="flex-1 flex justify-center items-center md:mb-0">
             <img
               src={Acs}
@@ -41,7 +42,6 @@ const Section2 = () => {
               className="w-40 h-40 sm:w-64 sm:h-64 object-contain"
             />
           </div>
-          {/* Content */}
           <div className="flex-1">
             <span className="block text-sm font-semibold text-purple-600 mb-2 tracking-wide">
               About ACS
