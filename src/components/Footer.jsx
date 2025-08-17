@@ -2,6 +2,7 @@ import React from "react";
 import { LinkedinIcon, Instagram, SendHorizontalIcon } from "lucide-react";
 
 const Footer = () => {
+  console.log("Footer component rendered");
   return (
     <>
       {/* Call-to-action section */}
