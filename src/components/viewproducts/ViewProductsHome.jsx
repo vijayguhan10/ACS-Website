@@ -17,7 +17,7 @@ import {
 } from "chart.js";
 Chart.register(LineElement, PointElement, LinearScale, CategoryScale);
 
-const PURPLE = "#9333ea"; // Tailwind text-purple-600
+const PURPLE = "#9333ea"; 
 
 const barData = [
   { name: "Mar", value: 2.5 },
