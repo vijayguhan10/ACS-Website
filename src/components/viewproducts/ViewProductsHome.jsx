@@ -17,7 +17,7 @@ import {
 } from "chart.js";
 Chart.register(LineElement, PointElement, LinearScale, CategoryScale);
 
-const PURPLE = "#9333ea"; // Tailwind text-purple-600
+const PURPLE = "#9333ea"; 
 
 const barData = [
   { name: "Mar", value: 2.5 },
@@ -70,12 +70,10 @@ const lineOptions = {
 export default function ViewProductsHome() {
   return (
     <div className="relative -top-20  min-h-screen w-full flex items-center justify-center  bg-gradient-to-b from-[#f4eaff] via-white to-white font-primary overflow-hidden">
-      {/* BUBBLE BACKGROUND */}
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-purple-300 rounded-full opacity-30 blur-[120px] z-0" />
       <div className="absolute -bottom-36 -right-36 w-[400px] h-[400px] bg-purple-200 rounded-full opacity-20 blur-[100px] z-0" />
       <div className="absolute top-1/2 left-2/3 w-[200px] h-[200px] bg-purple-100 rounded-full opacity-20 blur-[60px] z-0" />
 
-      {/* DECORATIVE ELEMENTS */}
       <svg width="120" height="60" className="absolute top-10 right-56 z-10">
         <path
           d="M10 30 Q60 0 110 30"

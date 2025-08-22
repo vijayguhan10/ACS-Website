@@ -22,7 +22,7 @@ const HandwrittenHeading = () => (
       }}
     >
       <span>
-        Tout votre business sur{" "}
+        Run your entire business on{" "}
         <span
           style={{
             background: "#fbbf24",
@@ -34,7 +34,7 @@ const HandwrittenHeading = () => (
             marginLeft: "0.2em",
           }}
         >
-          une plateforme.
+          one smart platform.
         </span>
       </span>
       <br />
@@ -50,7 +50,7 @@ const HandwrittenHeading = () => (
           textAlign: "center",
         }}
       >
-        Simple, efficace, et abordable!
+        Effortless. Intelligent. Affordable.
         <span
           style={{
             position: "absolute",
