@@ -1,5 +1,5 @@
 import AnimatedPipelineFlow from "./AnimatedPipelineFlow";
-import smallscreenvideo from "../assets/small-screen.mp4";
+import Spline from "@splinetool/react-spline";
 const stats = [
   { value: "50+", label: "ERP Projects Delivered" },
   { value: "10+", label: "Industries Served" },
@@ -232,18 +232,9 @@ const HomePage = () => (
             Discover Our ERP & AI Expertise
           </button>
         </div>
-        {/* Animated ERP Pipeline Flow */}
-        <div className="flex-1 flex justify-center items-center">
-          {/* Video: visible only on small screens */}
+=        <div className="flex-1 flex justify-center items-center">
           <div className="border border-white h-[125px] sm:hidden flex items-center justify-center">
-            <video
-              className="w-full h-full object-contain rounded-xl "
-              autoPlay
-              loop
-              muted
-            >
-              <source src={smallscreenvideo} type="video/mp4" />
-            </video>
+            <Spline scene="https://prod.spline.design/sxb0aKc3bksq5cpT/scene.splinecode" />
           </div>
           <div className="w-full max-w-[540px] h-[360px] hidden xl:block  items-center justify-center">
             <AnimatedPipelineFlow />
